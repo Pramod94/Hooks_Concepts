@@ -24,6 +24,7 @@ function App() {
       <Hook3 /> */}
       {/* <Hook4 /> */}
       <Hook5 />
+      <div>Feature1</div>
     </div>
   );
 }
