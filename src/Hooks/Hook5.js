@@ -5,6 +5,7 @@ function Hook5(){
 
     const [id, setId] = useState(1);
     const [idFetch, setIdFetch] = useState(1);
+    const [result, setResult] = useState('');
 
     const handleChange = (e) => {
         setId(e.target.value);
@@ -20,6 +21,7 @@ function Hook5(){
         axios.get(`https://jsonplaceholder.typicode.com/posts/${idFetch}`)
         .then(res => {
             console.log(res.data.title);
+            setResult(res.data.title);
         })
         .catch(err => {
             console.log(err);
@@ -30,6 +32,9 @@ function Hook5(){
         <div>
             <input type="text" value={id} onChange={handleChange} />
             <button onClick={handleClick}>Fetch</button>
+            <div>
+                {result}
+            </div>
         </div>
     )
 }

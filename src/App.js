@@ -5,6 +5,13 @@ import Hook2 from './Hooks/Hook2';
 import Hook3 from './Hooks/Hook3';
 import Hook4 from './Hooks/Hook4';
 import Hook5 from './Hooks/Hook5';
+import Hook6 from './Hooks/Hook6';
+
+const firstValue = {
+  name : "Pramod"
+}
+
+export const Mycontext = React.createContext();
 
 function App() {
   let initialValue = 0;
@@ -23,8 +30,10 @@ function App() {
       <Hook2 />
       <Hook3 /> */}
       {/* <Hook4 /> */}
-      <Hook5 />
-      <div>Feature1</div>
+      {/* <Hook5 /> */}
+      <Mycontext.Provider value={firstValue}>
+        <Hook6 />
+      </Mycontext.Provider>
     </div>
   );
 }
