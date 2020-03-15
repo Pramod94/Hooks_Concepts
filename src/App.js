@@ -6,6 +6,11 @@ import Hook3 from './Hooks/Hook3';
 import Hook4 from './Hooks/Hook4';
 import Hook5 from './Hooks/Hook5';
 import Hook6 from './Hooks/Hook6';
+import Counter from './Hooks/Hook7';
+import Counter1 from './Hooks/Hook8';
+import Counter2 from './Hooks/Hook9';
+import CounterContext from './Hooks/Context and Hook/Counter';
+import Response from './Hooks/API Call/Response';
 
 const firstValue = {
   name : "Pramod"
@@ -31,9 +36,14 @@ function App() {
       <Hook3 /> */}
       {/* <Hook4 /> */}
       {/* <Hook5 /> */}
-      <Mycontext.Provider value={firstValue}>
+      {/* <Mycontext.Provider value={firstValue}>
         <Hook6 />
-      </Mycontext.Provider>
+      </Mycontext.Provider> */}
+      {/* <Counter /> */}
+      {/* <Counter1 /> */}
+      {/* <Counter2 /> */}
+      {/* <CounterContext /> */}
+      <Response />
     </div>
   );
 }
